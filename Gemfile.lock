@@ -1,0 +1,23 @@
+GIT
+  remote: git://github.com/auser/poolparty.git
+  revision: d33ec930be1c886f5a4a88e8be4f8dd44b945631
+  submodules: true
+  specs:
+    poolparty (1.7.0.pre)
+      amazon-ec2 (~> 0.9.17)
+      json
+      xml-simple
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    amazon-ec2 (0.9.17)
+      xml-simple (>= 1.0.12)
+    json (1.5.3)
+    xml-simple (1.1.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  poolparty!

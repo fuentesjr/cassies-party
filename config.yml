@@ -1,0 +1,14 @@
+--- 
+name: cassies-party
+size: 3 # Number of nodes in cluster
+type: 08x # 07x, 08x, or brisk 
+opscenter: # Optional
+  username:
+  password:
+
+ec2:
+  # See http://aws.amazon.com/ec2/instance-types/
+  # instance type must be 64bit 
+  type: m1.large # m1.large(7.5GB RAM, 850GB Disk), m1.xlarge(15GB RAM, 1,690GB Disk)
+  keypair: ec2login
+  zones: [us-west-1a]
