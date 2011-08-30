@@ -16,12 +16,18 @@ For more details see [poolparty's setup guide](http://auser.github.com/poolparty
 
 ### Download
     git clone git://github.com/fuentesjr/cassies-party.git
+
+### Install
     cd cassies-party
     bundle install --binstubs
+
+### Configure
     # vim config.yml ... edit, edit, etc.
     # make sure to specify your ec2 ssh key (keypair) in config.yml otherwise 
     # you won't be able to ssh in. The ec2login default would look for:
     # ~/.ssh/ec2login.pem
+
+### Spawn cluster
     bin/cloud start -c ./clouds.rb
     bin/cloud ssh -c ./clouds.rb # Wait 5-10minutes afer this while the instance finalizes
 
@@ -33,6 +39,7 @@ Then have at it!
 1. [Great info when running on EC2](http://www.slideshare.net/mattdennis/cassandra-on-ec2)
 2. [Spawn cluster with DataStax AMI](http://www.datastax.com/dev/blog/setting-up-a-cassandra-cluster-with-the-datastax-ami)
 3. [Cassandra Cloud Wiki](http://wiki.apache.org/cassandra/CloudConfig)
+
 
 ### MIT License
 
