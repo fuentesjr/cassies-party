@@ -1,0 +1,10 @@
+--- 
+ssh:               22
+thrift:            9160 # Cassandra clients
+opscenter_web:     8888
+job_tracking:      8012  # Brisk mapreduce job tracking clients
+job_tracking_web:  50030 # Brisk mapreduce job tracking
+task_tracking_web: 50060 # Brisk mapreduce task tracking
+
+gossip:            7000
+opscenter_agents:  8888
