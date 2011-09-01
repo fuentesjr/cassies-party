@@ -4,7 +4,7 @@ require 'helpers'
 pool "ec2-setup" do  
   cloud "cassandra-cluster" do
     config = YAML::load(File.read("config.yml"))
-    ports = YAML::load(File.read("ports.yml"))
+    ports = config['ports']
 
     using :ec2
     keypair config['ec2']['keypair']
