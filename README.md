@@ -1,5 +1,5 @@
 ### Description
-This is effectively a [poolparty](http://auser.github.com/poolparty/) template that can easily spawn a [Cassandra](http://cassandra.apache.org/) (8.x or 7.x) or [Brisk](http://www.datastax.com/products/brisk) cluster on [Amazon's EC2](http://aws.amazon.com/ec2/). Additionaly, it can easily install [OpsCenter](http://www.datastax.com/products/opscenter) when provided with OpsCenter credentials. Most of the heavy lifting is done by the [DataStax EC2 AMI](https://github.com/riptano/ComboAMI) and [poolparty](https://github.com/auser/poolparty).
+This is effectively a [poolparty](http://auser.github.com/poolparty/) cloud.rb template that can easily spawn a [Cassandra](http://cassandra.apache.org/) (8.x or 7.x) or [Brisk](http://www.datastax.com/products/brisk) cluster on [Amazon's EC2](http://aws.amazon.com/ec2/). Additionaly, it can easily install [OpsCenter](http://www.datastax.com/products/opscenter) when provided with OpsCenter credentials. Most of the heavy lifting is done by the [DataStax EC2 AMI](https://github.com/riptano/ComboAMI) and [poolparty](https://github.com/auser/poolparty).
 
 ### Prereqs: EC2 Setup 
 Add your AWS Info to ~/.profile or ~/.bashrc:
@@ -12,7 +12,7 @@ Add your AWS Info to ~/.profile or ~/.bashrc:
 
 Also make sure to generate a [keypair](http://docs.amazonwebservices.com/AWSEC2/latest/CommandLineReference/index.html?ApiReference-cmd-CreateKeyPair.html) to use for ssh access.
 
-For more details see [poolparty's setup guide](http://auser.github.com/poolparty/amazon_ec2_setup.html)
+For more details see [poolparty's setup guide](http://auser.github.com/poolparty/amazon_ec2_setup.html).
 
 ### Download
     git clone git://github.com/fuentesjr/cassies-party.git
@@ -28,8 +28,8 @@ For more details see [poolparty's setup guide](http://auser.github.com/poolparty
     # ~/.ssh/ec2login.pem
 
 ### Spawn cluster
-    bin/cloud start -c ./clouds.rb
-    bin/cloud ssh -c ./clouds.rb # Wait 5-10minutes afer this while the instance finalizes
+    bin/cloud start -c ./clouds.rb # This spawns the cluster
+    bin/cloud ssh -c ./clouds.rb # Wait a few minutes while the DataStax AMI does its magic
 
 Then have at it! 
 
