@@ -42,9 +42,5 @@ pool "ec2-setup" do
       private_ports     << ports['opscenter_agents'] if using_opscenter?(config['opscenter'])
       private_ports.each {|port| authorize :from_port => port, :to_port => port, :group_name => 'cassandra' }
     end
-
-    load_balancer do
-      listener :external_port => ports['thrift'], :internal_port => ports['thrift'], :protocol => 'tcp'
-    end
   end
 end
